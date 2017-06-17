@@ -1,0 +1,356 @@
+#:kivy 1.0.9
+
+<Sudoku>:
+    orientation: 'vertical'
+    a1: a1
+    a2: a2
+    a3: a3
+    a4: a4
+    a5: a5
+    a6: a6
+    a7: a7
+    a8: a8
+    a9: a9
+    b1: b1
+    b2: b2
+    b3: b3
+    b4: b4
+    b5: b5
+    b6: b6
+    b7: b7
+    b8: b8
+    b9: b9
+    c1: c1
+    c2: c2
+    c3: c3
+    c4: c4
+    c5: c5
+    c6: c6
+    c7: c7
+    c8: c8
+    c9: c9
+    d1: d1
+    d2: d2
+    d3: d3
+    d4: d4
+    d5: d5
+    d6: d6
+    d7: d7
+    d8: d8
+    d9: d9
+    e1: e1
+    e2: e2
+    e3: e3
+    e4: e4
+    e5: e5
+    e6: e6
+    e7: e7
+    e8: e8
+    e9: e9
+    f1: f1
+    f2: f2
+    f3: f3
+    f4: f4
+    f5: f5
+    f6: f6
+    f7: f7
+    f8: f8
+    f9: f9
+    g1: g1
+    g2: g2
+    g3: g3
+    g4: g4
+    g5: g5
+    g6: g6
+    g7: g7
+    g8: g8
+    g9: g9
+    h1: h1
+    h2: h2
+    h3: h3
+    h4: h4
+    h5: h5
+    h6: h6
+    h7: h7
+    h8: h8
+    h9: h9
+    i1: i1
+    i2: i2
+    i3: i3
+    i4: i4
+    i5: i5
+    i6: i6
+    i7: i7
+    i8: i8
+    i9: i9
+
+    label: label
+    GridLayout:
+        size_hint_y: 90
+        cols: 3
+        rows: 3
+        spacing: 2,3
+
+        GridLayout: #1
+            cols: 3
+            rows: 3
+            Cell:
+                id: a1
+            Cell:
+                id: a2
+            Cell:
+                id: a3
+            Cell:
+                id: b1
+            Cell:
+                id: b2
+            Cell:
+                id: b3
+            Cell:
+                id: c1
+            Cell:
+                id: c2
+            Cell:
+                id: c3
+
+        GridLayout: #2
+            cols: 3
+            rows: 3
+            Cell:
+                id: a4
+            Cell:
+                id: a5
+            Cell:
+                id: a6
+            Cell:
+                id: b4
+            Cell:
+                id: b5
+            Cell:
+                id: b6
+            Cell:
+                id: c4
+            Cell:
+                id: c5
+            Cell:
+                id: c6
+
+        GridLayout: #3
+            cols: 3
+            rows: 3
+            Cell:
+                id: a7
+            Cell:
+                id: a8
+            Cell:
+                id: a9
+            Cell:
+                id: b7
+            Cell:
+                id: b8
+            Cell:
+                id: b9
+            Cell:
+                id: c7
+            Cell:
+                id: c8
+            Cell:
+                id: c9
+
+        GridLayout: #4
+            cols: 3
+            rows: 3
+            Cell:
+                id: d1
+            Cell:
+                id: d2
+            Cell:
+                id: d3
+            Cell:
+                id: e1
+            Cell:
+                id: e2
+            Cell:
+                id: e3
+            Cell:
+                id: f1
+            Cell:
+                id: f2
+            Cell:
+                id: f3
+
+        GridLayout: #5
+            cols: 3
+            rows: 3
+            Cell:
+                id: d4
+            Cell:
+                id: d5
+            Cell:
+                id: d6
+            Cell:
+                id: e4
+            Cell:
+                id: e5
+            Cell:
+                id: e6
+            Cell:
+                id: f4
+            Cell:
+                id: f5
+            Cell:
+                id: f6
+
+        GridLayout: #6
+            cols: 3
+            rows: 3
+            Cell:
+                id: d7
+            Cell:
+                id: d8
+            Cell:
+                id: d9
+            Cell:
+                id: e7
+            Cell:
+                id: e8
+            Cell:
+                id: e9
+            Cell:
+                id: f7
+            Cell:
+                id: f8
+            Cell:
+                id: f9
+
+        GridLayout: #7
+            cols: 3
+            rows: 3
+            Cell:
+                id: g1
+            Cell:
+                id: g2
+            Cell:
+                id: g3
+            Cell:
+                id: h1
+            Cell:
+                id: h2
+            Cell:
+                id: h3
+            Cell:
+                id: i1
+            Cell:
+                id: i2
+            Cell:
+                id: i3
+
+        GridLayout: #8
+            cols: 3
+            rows: 3
+            Cell:
+                id: g4
+            Cell:
+                id: g5
+            Cell:
+                id: g6
+            Cell:
+                id: h4
+            Cell:
+                id: h5
+            Cell:
+                id: h6
+            Cell:
+                id: i4
+            Cell:
+                id: i5
+            Cell:
+                id: i6
+
+        GridLayout: #9
+            cols: 3
+            rows: 3
+            Cell:
+                id: g7
+            Cell:
+                id: g8
+            Cell:
+                id: g9
+            Cell:
+                id: h7
+            Cell:
+                id: h8
+            Cell:
+                id: h9
+            Cell:
+                id: i7
+            Cell:
+                id: i8
+            Cell:
+                id: i9
+
+    BoxLayout:
+        size_hint_y: 10
+
+        Label:
+            size_hint_x: 35
+            id: label
+            text: 'Notification.'
+
+        Button:
+            size_hint_x: 10
+            text: 'Check'
+            on_press: root.check()
+
+        Button:
+            size_hint_x: 10
+            text: 'Hint'
+            on_press: root.hint()
+
+        Button:
+            size_hint_x: 10
+            text: 'Solve'
+            on_press: root.solve()
+
+        Button:
+            size_hint_x: 10
+            text: 'Clear'
+            on_press: root.clear()
+
+        Button:
+            size_hint_x: 10
+            text: 'Save'
+            on_press: root.confirm()
+
+        Button:
+            size_hint_x: 10
+            text: 'Camera'
+            on_press: root.camera()
+
+        Button
+            size_hint_x: 5
+            text: "\/"
+            on_press: root.show_load()
+
+
+<Cell@tInput>:
+    padding_x: self.width/2.5,0
+
+<LoadDialog>:
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: "Cancel"
+                on_release: root.cancel()
+
+            Button:
+                text: "Load"
+                on_release: root.load(filechooser.path, filechooser.selection)
