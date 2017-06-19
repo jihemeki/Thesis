@@ -376,10 +376,15 @@ class Sudoku(BoxLayout):
         self._popup.open()
 
 
-    def camera(self):
+    def cameraSolve(self):
 	self.cameraStatus = 1
 	print self.cameraStatus
 	App.get_running_app().stop()
+	
+    def cameraHint(self):
+	self.cameraStatus = 2
+	print self.cameraStatus
+	App.get_running_app().stop() 
 	        
         
     def clear(self):

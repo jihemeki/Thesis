@@ -293,39 +293,46 @@
         size_hint_y: 10
 
         Label:
-            size_hint_x: 35
+            size_hint_x: 30
             id: label
-            text: 'Notification.'
+            text: 'Notification.'	
 
         Button:
-            size_hint_x: 10
+            size_hint_x: 9
             text: 'Check'
             on_press: root.check()
 
         Button:
-            size_hint_x: 10
+            size_hint_x: 9
             text: 'Hint'
             on_press: root.hint()
 
         Button:
-            size_hint_x: 10
+            size_hint_x: 9
             text: 'Solve'
             on_press: root.solve()
 
         Button:
-            size_hint_x: 10
+            size_hint_x: 9
             text: 'Clear'
             on_press: root.clear()
 
         Button:
-            size_hint_x: 10
+            size_hint_x: 9
             text: 'Save'
             on_press: root.confirm()
 
-        Button:
-            size_hint_x: 10
-            text: 'Camera'
-            on_press: root.camera()
+        BoxLayout:
+            size_hint_x: 15
+            orientation: "vertical"
+
+            Button:
+                text: 'Solve Camera'
+                on_press: root.cameraSolve()
+
+            Button:
+                text: 'Hint Camera'
+                on_press: root.cameraHint()
 
         Button
             size_hint_x: 5
