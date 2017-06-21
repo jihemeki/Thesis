@@ -7,6 +7,7 @@ import random as rn
 import copy
 import sudokuS
 import datetime
+#AA
 
 cap = cv2.VideoCapture(0)
 
