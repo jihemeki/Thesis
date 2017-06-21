@@ -16,4 +16,3 @@ while True:
         print "Exit"
         break
 
-#This is a tesxt
